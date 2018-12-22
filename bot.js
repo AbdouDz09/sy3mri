@@ -100,16 +100,6 @@ client.on("message", message => {
 
 
 
-
-
-client.on('message', message => {
-    var  user = message.mentions.users.first() || message.author;
-if (message.content.startsWith("&avatar")) 
-message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
-};
-});
-
-
   client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
@@ -131,7 +121,6 @@ m.sendMessage(args)
          .setDescription(`**Help|هيلب
        &bc | لأرسال برود كاست للكل
        &obc  |  لأرسال برود كاست للأونلاين
-       &avatar | إعطاء رابط صورة
        &adminbc | إرسالة  برودكاست  للإدارة
        &nbc | برودكاست مطور
        d!support | سيرفر السبورت** `)
